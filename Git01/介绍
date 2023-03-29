@@ -78,25 +78,13 @@ git commit -m "mv and rm"
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+版本控制
+1、退回到上一版本
+git reset --hard HEAD^
+reset --hard表示版本退回
+HEAD表示指向最新版本的指针
+退回到上一版本，让工作区与仓库区达到一致，注意：工作区未提交的文件会被抹除
+指定退往某一次commit操作
+git reset --hard [commit编码前7位]
+2、查看所有操作
+git reflog
