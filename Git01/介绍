@@ -142,6 +142,7 @@ git checkout -b [branch_name]
 5、合并各个分支
 git merge [branch_name]
 冲突解决
+<<<<<<< HEAD
 git commit -m 'merge files'
 冲突问题是合并分支过程中最为棘手的问题
     当分支合并时，原分支和以前发生了变化就会产生冲突当合并分支时添加
@@ -150,6 +151,7 @@ git commit -m 'merge files'
 6、删除分支
 git branch -d [branch_name]           删除分支
 git branch -D [branch_name]           删除没有被合并的分支
+
 
 
 
