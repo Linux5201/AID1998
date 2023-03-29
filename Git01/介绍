@@ -88,3 +88,36 @@ HEAD表示指向最新版本的指针
 git reset --hard [commit编码前7位]
 2、查看所有操作
 git reflog
+3、创建标签
+标签：在项目的重要commit位置添加快照，保存当时的工作状态，一般用于版本的迭代。
+git tag [tag_name] [commit_id] -m [message]
+说明：commit_id可以不写则默认标签表示新的commit_id位置，message也可以不写，但是最好添加。
+eg.在最新的commit处添加标签v1.0
+git tag v1.0 -m '版本1'
+git tag v0.9 [commit编码前7位] -m '版本0.9'
+4、查看标签
+git tag
+git log --pretty=oneline
+查看详细信息
+git show v1.0
+5、去往哪个标签结点
+git reset --hard [tag]
+6、删除标签
+git tag -d v0.9
+
+
+保存工作区
+1、保存工作区内容
+git stash save [message]
+说明：将工作区未提交的修改封存，让工作区回到修改前的状态
+2、查看工作区列表
+git stash list
+说明：最新保存的工作区在上面
+3、应用某个工作区
+git stash apply [stash@{n}]
+之后还需要向暂存区和仓库提交，add commit
+
+
+
+
+
