@@ -1,0 +1,102 @@
+1、什么是GIT
+    git是一个开源的分布式版本控制系统，用于高效的管理各种大小项目和文件
+
+2、代码管理工具的用途
+    * 防止代码丢失，做备份
+    * 项目的版本管理和控制，可以通过设置节点进行跳转
+    * 建立各自的开发环境分支，互不影响，方便合并
+    * 在多终端开发时，方便代码的相互传输
+3、git的特点
+    * 是开源的，多在*nix下使用，可以管理各种文件
+    * git是分布式的项目管理工具(svn是集中式的)
+    * git数据管理更多样化，分享速度快，数据安全
+    * git拥有更好的分支支持，方便多人协调
+
+本地计算机：工作区；暂存区；仓库
+网络主机：远程仓库
+
+1、配置用户名
+配置所有用户：git config --system user.name 名字
+配置文件位置：cat /etc/gitconfig
+配置当前用户：git config --global[选项]
+配置文件位置：~/.gitconfig
+配置当前项目：git config[选项]
+配置文件位置：project/.git/config
+
+1、配置用户名
+git config --system user.name 名字
+查看：cat /etc/gitconfig
+2、配置用户邮箱
+git config --global user.email 邮箱地址
+查看：cat .gitconfig
+创建工程目录：mkdir gitproject
+到达工程目录：cd gitproject/
+初始化工程目录：git init     意义在于后续在gitproject目录下写的所有内容都可以使用git进行管理；gitproject做为项目的根目录
+配置编译器： git config core.editor pycharm
+查看隐藏文件：ls -a
+查看编译器： cat .git/config
+
+
+
+1、初始化仓库
+git init
+意义在于后续在gitproject目录下写的所有内容都可以使用git进行管理；gitproject做为项目的根目录
+2、查看本地仓库状态
+git status
+初始化仓库默认工作在master分支，当工作区与仓库区不一致时会有提示
+3、将工作内容记录到暂存区
+git add [files..]
+git add .或者*
+eg. 将a,b记录到暂存区
+git add a b
+eg. 将所有文件记录到暂存区
+git add *
+4、将暂存区的文件撤回
+git rm --cached README.md
+5、将文件同步到本地仓库
+git commit [file] -m [message]
+说明：-m表示添加一些同步信息，表达同步内容
+eg. 将暂存区所有记录同步到仓库区
+git commit -m 'add files'
+6、查看commit日志记录
+git log
+git log --pretty=oneline
+7、比较工作区文件与仓库文件差异
+git diff [file]
+8、将暂存区或者某个commit点文件恢复到工作区
+git checkout [commit] -- [file]
+git checkout -- [file]
+ -- 为了防止误操作，checkout还有切换分支的作用
+9、移动或者删除文件
+git mv [file] [path]
+git rm [files]
+注意：这两个操作会修改工作区内容，同时将操作记录提交到暂存区。
+10、将移动或者删除操作同步到仓库区
+git commit -m "mv and rm"
+
+.gitignore忽略规则简单说明
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
