@@ -1,0 +1,47 @@
+系统编程
+    Linux操作系统：shell命令  文件系统结构
+
+    IO网络编程
+        文件IO:open()、read()、write()、close()、flush()、seek()
+        网络IO
+            理论基础：OSI模型、TCP/IP模型、以及TCP的三次握手、四次挥手、http协议、传输协议：TCP和UDP的区别
+            TCP通信：流式套接字；socket()、bind()、listen()、accept()、recv()、send()、connect()
+            UDP通信：数据包套接字；socket()、bind()、recvfrom()、sendto()
+
+    并发编程
+        进程
+            进程理论：什么是进程、进程的进程、僵尸进程、孤儿进程
+            fork进程：os.fork()、基于fork()网络并发
+            Process进程：Process()、start()、join()、进程池Pool、进程间通信（管道，消息队列，共享内存，信号量）具有亲缘关系的进程间的通信
+
+        线程
+            线程创建：Thread()、start()、join()、基于线程的网络并发
+            同步互斥：解决共享资源的争夺问题，Event()、Lock()、死锁()
+            GIL问题：python解释器同一时刻只能解锁执行一个线程，大大降低了线程的执行效率
+
+        IO并发
+            阻塞：默认形态，效率低下
+            非阻塞IO：block、timeout
+            IO多路复用：select()、poll()、epoll()
+            协程：什么是协程，gevent()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
