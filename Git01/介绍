@@ -153,6 +153,25 @@ git branch -d [branch_name]           删除分支
 git branch -D [branch_name]           删除没有被合并的分支
 
 
+GitHub介绍
+下载：
+git clone https://github.com/weqq2019/tmooc_cn.git
+添加远程主机：
+git remote add origin https://github.com/Linux5201/AID1998.git
+删除一个远程主机：
+git remote rm origin
+上传：
+git push -u origin master
+-u表示建立对应关联
+
+
+
+
+
+
+
+
+
 
 
 
