@@ -135,22 +135,21 @@ git branch
 git branch [branch_name]
 说明：基于a分支创建b分支，此时b分支会拥有a分支全部内容，在创建b
 分支时最好保持a分支"干净"状态。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+3、切换分支
+git checkout [branch_name]
+4、创建并切换到那个分支
+git checkout -b [branch_name]
+5、合并各个分支
+git merge [branch_name]
+冲突解决
+git commit -m 'merge files'
+冲突问题是合并分支过程中最为棘手的问题
+    当分支合并时，原分支和以前发生了变化就会产生冲突当合并分支时添加
+    新的模块（文件），这种冲突可以自动解决，只需自己决定commit操作即可。
+    当合并分支时两个分支修改同一个文件，则需要手动解决冲突。
+6、删除分支
+git branch -d [branch_name]           删除分支
+git branch -D [branch_name]           删除没有被合并的分支
 
 
 
