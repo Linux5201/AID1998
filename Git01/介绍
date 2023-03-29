@@ -116,7 +116,12 @@ git stash list
 3、应用某个工作区
 git stash apply [stash@{n}]
 之后还需要向暂存区和仓库提交，add commit
-
+git commit -m 'change Git01/介绍'
+4、删除工作区
+git stash drop [stash@{n}]
+删除指定工作区
+git stash drop clear
+删除所有工作区
 
 
 
