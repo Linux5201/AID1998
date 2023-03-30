@@ -25,7 +25,7 @@ import pandas as pd
 data_txt = np.loadtxt('lod/input.txt')
 data_txtDF = pd.DataFrame(data_txt)
 data_txtDF.to_csv('lod/input.csv', index=False)
-
+print("fetch 拉取代码")
 
 
 
